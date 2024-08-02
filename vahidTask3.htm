@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inp">
+    <button onclick="show()">Ok</button>
+    <div id="goster"></div>
+
+    <script>
+        let inp = document.getElementById("inp")
+        let goster = document.getElementById("goster")
+        let arr = []
+
+        function show() {
+            let kod = ''
+            arr.push(inp.value.trim())
+            for (let i = 0; i < arr.length; i++) {
+                kod += arr[i] + '</br>'
+            }
+            goster.innerHTML = kod
+            inp.value = ''
+        }
+    </script>
+</body>
+
+</html>

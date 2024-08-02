@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- inputun icine daxil edilen butun sozlerin herflerininin hamisi boyuderek yazmaq! -->
+
+    <input type="text" id="inp">
+    <button onclick="bas()">ok</button>
+    <div id="txt"></div>
+
+    <script>
+        let inp = document.getElementById("inp")
+        let txt = document.getElementById("txt")
+        let arr = []
+
+        function bas() {
+            let kod = ''
+            arr.push(inp.value.trim())
+            for (let i = 0; i < arr.length; i++) {
+                kod += `${arr[i].toUpperCase()} </br>`
+            }
+            inp.value = ''
+            txt.innerHTML = kod
+        }
+
+    </script>
+</body>
+
+</html>

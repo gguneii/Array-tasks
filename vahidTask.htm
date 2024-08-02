@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="inp">
+    <button onclick="goster()">ok</button>
+    <div id="show"></div>
+    <script>
+        let inp = document.getElementById('inp')
+        let show = document.getElementById('show')
+        let arr = []
+
+        function goster() {
+            if (inp.value != '') {
+                let kod = ''
+                arr.push(inp.value.toLowerCase())
+                for (let i = 0; i < arr.length; i++) {
+                    const word = arr[i];
+                    for (let j = 0; j < word.length; j++) {
+                        kod += word.slice(0, j) + word[j].toUpperCase() + word.slice(j + 1) + '</br>';
+                    }
+                }
+                show.innerHTML = kod
+                inp.value = ''
+            }
+        }
+    </script>
+</body>
+
+</html>
